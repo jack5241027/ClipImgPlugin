@@ -1,0 +1,13 @@
+.imgPlace{
+    position: relative;
+}
+
+.upImg {
+    position: absolute;
+    z-index: 2;
+}
+
+.downImg {
+    position: absolute;
+    z-index: 1;
+}
