@@ -1,14 +1,22 @@
-.imgPlace{
+.wrap {
     position: relative;
-    width: 625px;
-    height:625px;
+}
+
+.line {
+    position: absolute;
+    width: 2px;
+    height: 1px;
+    background-color: white;
+    /*border: 5px solid white;*/
+    left: 50%;
+    z-index: 3;
 }
 
 .upImg {
     position: absolute;
     z-index: 2;
-    background-clip:content-box;
-    border-left:1px white solid; 
+    background-clip: content-box;
+    /*border-left:1px white solid; */
 }
 
 .downImg {
