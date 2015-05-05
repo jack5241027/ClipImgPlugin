@@ -1,37 +1,27 @@
-// (function($) {
+(function($) {
 
-//     $.fn.clipImg = function(config) {
-//         $(this).hover(function(e) {
+    $.fn.clipImg = function(config) {
+        var mousePos = 0;
 
-//         	console.log(e.pageX);
-
-//         }, function(e) {
-
-//         });
-
-//         (function(e) {
-//             e.preventDefault();
-//             pageApp.changeScene(4, {}, true);
-//         });
-
-//         return this;
-//     };
-
-//     this.each(function() {
-//         init($(this));
-//     });
-
-//     $('.js_toRule').toRule();
-
-// })($);
-
-var clip = {
-    mousePos : '0px',
-    mousemove: function() {
-        $('.upImg').mousemove(function(e) {
-        	var g = $('.imgPlace').offset().left;
-			mousePos = e.pageX;
-            $(this).css('clip', 'rect(0px, ' + mousePos + 'px, 678px, 0px)');
+        $(this).parents('.imgPlace').mousemove(function(e) {
+            mousePos = e.pageX;
+            $('.upImg').css('clip', 'rect(0px, ' + mousePos + 'px, 678px, 0px)');
         });
-    }()
-};
+
+        return this;
+    };
+
+    $('.upImg').clipImg();
+
+})($);
+
+// var clip = {
+//     mousePos : '0px',
+//     mousemove: function() {
+//         $('.imgPlace').mousemove(function(e) {
+//         	var g = $('.imgPlace').offset().left;
+// 			mousePos = e.pageX;
+//             $('.upImg').css('clip', 'rect(0px, ' + mousePos + 'px, 678px, 0px)');
+//         });
+//     }()
+// };

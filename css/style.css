@@ -1,10 +1,14 @@
 .imgPlace{
     position: relative;
+    width: 625px;
+    height:625px;
 }
 
 .upImg {
     position: absolute;
     z-index: 2;
+    background-clip:content-box;
+    border-left:1px white solid; 
 }
 
 .downImg {
