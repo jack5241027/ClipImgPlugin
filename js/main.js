@@ -6,9 +6,6 @@
         var imgPlaceHeight= $this.height();
     	var mousePos = (imgPlaceWeight /2);
     	$this.css('clip', 'rect(0px, ' + mousePos + 'px, 678px, 0px)');
-        $('.line').css({
-        	'height':imgPlaceHeight
-        });
 
         $(this).parent().css({
         	'width' :imgPlaceWeight,
